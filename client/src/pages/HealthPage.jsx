@@ -10,7 +10,7 @@ const HealthPage = () => {
   useEffect(() => {
     const checkHealth = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/healthz');
+        const res = await axios.get('https://tinylink-backend-gkip.onrender.com/healthz');
         setStatus(res.data);
       } catch (err) {
         setError(true);

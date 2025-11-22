@@ -13,7 +13,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchLinks = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/links');
+        const res = await axios.get('https://tinylink-backend-gkip.onrender.com/api/links');
         setLinks(res.data);
       } catch (error) {
         toast.error('Failed to load links');
@@ -32,7 +32,7 @@ const Dashboard = () => {
   const handleCreate = async (formData) => {
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/links', formData);
+      await axios.post('https://tinylink-backend-gkip.onrender.com/api/links', formData);
       toast.success('Link created successfully!');
       setRefresh(prev => !prev); 
     } catch (error) {
@@ -47,7 +47,7 @@ const Dashboard = () => {
      if(!window.confirm("Are you sure you want to delete this link?")) return;
      
      try {
-        await axios.delete(`http://localhost:5000/api/links/${code}`);
+        await axios.delete(`https://tinylink-backend-gkip.onrender.com/api/links/${code}`);
         toast.success('Link deleted');
         setRefresh(prev => !prev);
      } catch (error) {

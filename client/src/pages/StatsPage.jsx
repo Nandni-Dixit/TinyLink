@@ -13,7 +13,7 @@ const StatsPage = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/links/${code}`);
+        const res = await axios.get(`https://tinylink-backend-gkip.onrender.com/api/links/${code}`);
         setLink(res.data);
       } catch (err) {
         setError('Link not found');

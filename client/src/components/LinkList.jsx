@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 const LinkList = ({ links, onDelete }) => {
   
   const copyToClipboard = (shortCode) => {
-    const fullUrl = `http://localhost:5000/${shortCode}`;
+    const fullUrl = `https://tinylink-backend-gkip.onrender.com/${shortCode}`;
     navigator.clipboard.writeText(fullUrl);
     toast.success('Copied to clipboard!');
   };
@@ -36,7 +36,7 @@ const LinkList = ({ links, onDelete }) => {
                 {/* Short Link */}
                 <td className="px-6 py-4">
                   <div className="flex items-center gap-2 font-medium text-blue-600">
-                    <a href={`http://localhost:5000/${link.shortCode}`} target="_blank" rel="noreferrer" className="hover:underline">
+                    <a href={`https://tinylink-backend-gkip.onrender.com/${link.shortCode}`} target="_blank" rel="noreferrer" className="hover:underline">
                       /{link.shortCode}
                     </a>
                     <button onClick={() => copyToClipboard(link.shortCode)} className="text-gray-400 hover:text-blue-600" title="Copy">

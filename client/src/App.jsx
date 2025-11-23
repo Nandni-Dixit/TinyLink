@@ -16,7 +16,7 @@ function App() {
         <div className="container mx-auto p-4 max-w-4xl">
           <Routes>
             <Route path="/" element={<Dashboard />} />
-            <Route path="/code/:code" element={<StatsPage />} /> {/* Naya Route */}
+            <Route path="/code/:code" element={<StatsPage />} /> 
             <Route path="/healthz" element={<HealthPage />} />
           </Routes>
         </div>
